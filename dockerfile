@@ -17,7 +17,8 @@ RUN	apt-get install git
 RUN	git clone https://github.com/bnw/firefly-iii-fints-importer.git
 
 RUN	cd firefly-iii-fints-importer
-	composer install
+
+RUN	composer install
 
 # Expose port 80
 EXPOSE 5085
