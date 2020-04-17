@@ -29,4 +29,6 @@ rm -f $HOMEPATH/storage/logs/laravel.log
 
 echo "now the new part"
 
+composer install
+
 php -S 0.0.0.0:5085 app/index.php
