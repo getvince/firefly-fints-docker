@@ -11,6 +11,8 @@ COPY scripts/site.conf /etc/apache2/sites-available/000-default.conf
 # install Firefly III CSV Importer and patch configuration
 WORKDIR $HOMEPATH
 
+RUN cd ..
+
 RUN apt-get update
 
 RUN	apt-get -qq install git
