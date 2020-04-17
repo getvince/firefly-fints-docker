@@ -27,8 +27,11 @@ chmod -R 775 $HOMEPATH/storage
 # remove any lingering files that may break upgrades:
 rm -f $HOMEPATH/storage/logs/laravel.log
 
-echo "now the new part"
+echo "Installing via composer"
 
+cd firefly-iii-fints-importer
 composer install
 
-php -S 0.0.0.0:5085 app/index.php
+echo "Ready to start webserver on port 80"
+
+php -S 0.0.0.0:80 app/index.php
