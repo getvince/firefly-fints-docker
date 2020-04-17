@@ -2,6 +2,7 @@ FROM fireflyiii/tools-base-image:latest-amd64
 # To learn more about this base image, visit https://github.com/firefly-iii/tools-base-image
 
 ARG RELEASE=develop
+ARG DEBIAN_FRONTEND=noninteractive
 ENV HOMEPATH=/var/www/html COMPOSER_ALLOW_SUPERUSER=1
 LABEL version="1.0" maintainer="noone"
 
@@ -12,7 +13,7 @@ WORKDIR $HOMEPATH
 
 RUN apt-get update
 
-RUN	apt-get install git
+RUN	apt-get -qq install git
 
 RUN	git clone https://github.com/bnw/firefly-iii-fints-importer.git
 
